@@ -17,7 +17,7 @@ namespace Quiz.Infrastructure
         {
             services.AddDbContext<IQuiz, QuizDbContext>(options =>
             {
-                options.UseNpgsql(configuration.GetConnectionString("CatalogConnectionString"));
+                options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"));
             });
             return services;
         }
